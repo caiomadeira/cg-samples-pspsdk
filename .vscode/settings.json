@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "graphic.h": "c",
+        "menu.h": "c",
+        "common.h": "c",
+        "player.h": "c",
+        "cstdlib": "c"
+    }
+}
