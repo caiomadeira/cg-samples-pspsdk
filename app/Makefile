@@ -1,5 +1,5 @@
 TARGET = hello
-OBJS = main.o common.o
+OBJS = main.o common.o geometry.o
 
 INCDIR =
 CFLAGS = -G0 -Wall -O2

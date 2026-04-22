@@ -6,40 +6,12 @@
 #include <pspdisplay.h>
 #include <pspgu.h>
 #include <pspgum.h>
-
-typedef struct {
-    float x, y, z;
-} Point;
-
-typedef struct {
-    Point coords[3];
-    float CurveTotalLength;
-    unsigned int color;
-} Bezier;
-
-typedef struct {
-    unsigned int color;
-    float x, y, z;
-} VertexCurve;
-
-void initBezier(Bezier *b);
-void initBezierWithPoints(Bezier* b, Point p0, Point p1, Point p2);
-void initBezierWithArray(Bezier *b, Point v[]);
-Point calculateBezier(const Bezier* b, double t);
-Point getPointControllerBezier(Bezier* b, int i);
-void calculateCurveLengthBezier(Bezier *b);
-void drawBezier(const Bezier *b);
-void drawBezierControlPolygon(const Bezier* b);
-
-void SetPoint(Point *p, float x, float y, float z);
-
-// a ORDEM IMPORTA Primeiro a cor (32 bits), depois as posições X, Y, Z (float 32 bits)
-struct Vertex {
-    unsigned int color;
-    float x, y, z;
-};
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 void SetupCallbacks(void);
+#define print pspDebugScreenPrintf
 
 #endif
 
